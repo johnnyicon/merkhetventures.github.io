@@ -11,18 +11,34 @@ Move the public Merkhet Ventures website from GitHub Pages to Cloudflare Pages w
 - Company, content, and brand source material: `content/` and `brand/`
 - Legacy GitHub Pages implementation: `archive/legacy-titan-theme/`
 
-## Cloudflare Pages project configuration
+## Current Cloudflare Pages preview
 
-Create one Git-connected Cloudflare Pages project for the public website:
+The Git-connected Pages project has been created and the first deployment has been verified:
+
+| Setting | Current value |
+| --- | --- |
+| Pages project | `merkhet-ventures` |
+| Temporary preview address | `https://merkhet-ventures.pages.dev` |
+| GitHub repository | `johnnyicon/merkhetventures.github.io` |
+| Current Pages production branch | `codex/monorepo-cloudflare-pages` |
+| Static output directory | `apps/website` |
+| Build command | `exit 0` |
+| First verified deployment | `970fe7f` |
+
+This project has **no custom domain attached**. `merkhetventures.com`, `www`, all DNS records, and Google Workspace are still on their previous configuration.
+
+## Final Cloudflare Pages project configuration
+
+Before the public cutover, merge the approved work into `master` and update the Pages production branch to `master`:
 
 | Setting | Value |
 | --- | --- |
 | GitHub repository | `johnnyicon/merkhetventures.github.io` |
-| Production branch | `master` |
-| Root directory | `apps/website` |
+| Production branch | `master` after approval; the migration branch until then |
+| Root directory | Repository root |
 | Framework | None / static HTML |
 | Build command | No build required (or `exit 0` if Cloudflare requests a command) |
-| Build output | The directory containing `index.html` |
+| Build output | `apps/website` |
 | Preview deployments | Enabled for non-production branches |
 | Build watch paths | Include `apps/website/*`; exclude `archive/*` and, if desired, content-only paths |
 
