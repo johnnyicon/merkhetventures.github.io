@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Merkhet Ventures — strategy, partnerships, and practical work for stronger communities and more capable systems.">
+    <title>Merkhet Ventures — Transforming Knowledge Into Wisdom For Impact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --ink: #10232a;
+        --muted: #617077;
+        --paper: #f3f1eb;
+        --paper-deep: #e6e4dc;
+        --night: #0b1b21;
+        --line: rgba(16, 35, 42, 0.16);
+        --gold: #c7a56a;
+        --serif: "DM Serif Display", Georgia, serif;
+        --sans: "Inter", Helvetica, Arial, sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      a { color: inherit; }
+
+      .skip-link {
+        position: absolute;
+        left: 1rem;
+        top: -4rem;
+        z-index: 10;
+        padding: 0.75rem 1rem;
+        background: var(--gold);
+        color: var(--ink);
+        text-decoration: none;
+      }
+
+      .skip-link:focus { top: 1rem; }
+
+      .hero {
+        min-height: 100svh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        color: #f8f6ef;
+        background: var(--night);
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, rgba(40, 115, 113, 0.57) 25%, rgba(115, 54, 31, 0.67) 75%);
+        z-index: 1;
+      }
+
+      .hero-media {
+        position: absolute;
+        inset: 0;
+        background: url("assets/images/section-10.jpg") center 42% / cover no-repeat;
+        filter: saturate(0.92) contrast(0.98);
+        opacity: 1;
+      }
+
+      .site-header,
+      .hero-content,
+      .hero-footer { position: relative; z-index: 2; }
+
+      .site-header {
+        width: min(1120px, calc(100% - 3rem));
+        margin: 0 auto;
+        padding: 1.6rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(248, 246, 239, 0.22);
+      }
+
+      .wordmark {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .header-note {
+        color: rgba(248, 246, 239, 0.7);
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .hero-content {
+        width: min(1120px, calc(100% - 3rem));
+        margin: 0 auto;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 7rem 0 5rem;
+      }
+
+      .eyebrow,
+      .section-label {
+        margin: 0 0 1.4rem;
+        color: var(--gold);
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.19em;
+        line-height: 1.4;
+        text-transform: uppercase;
+      }
+
+      .hero h1 {
+        max-width: 750px;
+        margin: 0;
+        font-family: var(--serif);
+        font-size: clamp(3.8rem, 9vw, 8.4rem);
+        font-weight: 400;
+        letter-spacing: -0.055em;
+        line-height: 0.91;
+      }
+
+      .hero h1 em { color: #d9c292; font-style: italic; }
+
+      .hero-description {
+        max-width: 420px;
+        margin: 2.3rem 0 0;
+        color: rgba(248, 246, 239, 0.84);
+        font-size: 1rem;
+      }
+
+      .hero-link {
+        width: fit-content;
+        margin-top: 2.5rem;
+        padding-bottom: 0.35rem;
+        border-bottom: 1px solid var(--gold);
+        color: #f8f6ef;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .hero-footer {
+        width: min(1120px, calc(100% - 3rem));
+        margin: 0 auto;
+        padding: 1.25rem 0 1.7rem;
+        display: flex;
+        justify-content: space-between;
+        color: rgba(248, 246, 239, 0.58);
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .section {
+        width: min(1120px, calc(100% - 3rem));
+        margin: 0 auto;
+        padding: 9rem 0;
+      }
+
+      .intro {
+        display: grid;
+        grid-template-columns: minmax(160px, 0.7fr) 1.3fr;
+        gap: 4rem;
+        align-items: start;
+      }
+
+      .intro h2,
+      .principles h2 {
+        max-width: 690px;
+        margin: 0;
+        font-family: var(--serif);
+        font-size: clamp(2.7rem, 5vw, 5rem);
+        font-weight: 400;
+        letter-spacing: -0.045em;
+        line-height: 0.98;
+      }
+
+      .intro-copy {
+        max-width: 560px;
+        margin: 2rem 0 0;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+
+      .intro-aside {
+        max-width: 470px;
+        margin: 2.75rem 0 0;
+        padding-top: 1.35rem;
+        border-top: 1px solid var(--line);
+        color: var(--ink);
+        font-family: var(--serif);
+        font-size: 1.45rem;
+        letter-spacing: -0.025em;
+        line-height: 1.18;
+      }
+
+      .mission { padding-top: 7rem; }
+
+      .mission-copy {
+        max-width: 640px;
+        margin: 2rem 0 0;
+        color: var(--muted);
+        font-family: var(--serif);
+        font-size: clamp(1.8rem, 3.2vw, 3.3rem);
+        letter-spacing: -0.035em;
+        line-height: 1.08;
+      }
+
+      .work { padding-top: 2rem; }
+
+      .work-heading {
+        max-width: 620px;
+        margin: 0;
+        font-family: var(--serif);
+        font-size: clamp(2.7rem, 5vw, 5rem);
+        font-weight: 400;
+        letter-spacing: -0.045em;
+        line-height: 0.98;
+      }
+
+      .work-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 4rem;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .work-step {
+        min-height: 265px;
+        padding: 1.7rem 1.7rem 2rem 0;
+      }
+
+      .work-step + .work-step {
+        padding-left: 1.7rem;
+        border-left: 1px solid var(--line);
+      }
+
+      .step-number {
+        display: block;
+        color: var(--gold);
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+      }
+
+      .work-step h3 {
+        margin: 4.75rem 0 0;
+        font-family: var(--serif);
+        font-size: 2rem;
+        font-weight: 400;
+        letter-spacing: -0.04em;
+        line-height: 1;
+      }
+
+      .work-step p {
+        margin: 1rem 0 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.55;
+      }
+
+      .attention { padding-top: 3rem; }
+
+      .attention-heading {
+        max-width: 650px;
+        margin: 0;
+        font-family: var(--serif);
+        font-size: clamp(2.7rem, 5vw, 5rem);
+        font-weight: 400;
+        letter-spacing: -0.045em;
+        line-height: 0.98;
+      }
+
+      .attention-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin: 4rem 0 0;
+        padding: 0;
+        list-style: none;
+        border-top: 1px solid var(--line);
+      }
+
+      .attention-list li {
+        padding: 1.55rem 0;
+        border-bottom: 1px solid var(--line);
+        font-family: var(--serif);
+        font-size: clamp(1.35rem, 2vw, 1.8rem);
+        letter-spacing: -0.03em;
+        line-height: 1.08;
+      }
+
+      .attention-list li:nth-child(odd) { padding-right: 2rem; }
+      .attention-list li:nth-child(even) { padding-left: 2rem; border-left: 1px solid var(--line); }
+
+      .quote {
+        padding: 9rem max(1.5rem, calc((100vw - 1120px) / 2));
+        background: var(--night);
+        color: #f8f6ef;
+      }
+
+      .quote-inner { max-width: 860px; margin: 0 auto; text-align: center; }
+
+      .quote-mark {
+        display: block;
+        margin-bottom: 2rem;
+        color: var(--gold);
+        font-family: var(--serif);
+        font-size: 4rem;
+        line-height: 0.5;
+      }
+
+      blockquote {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: clamp(2.2rem, 5vw, 4.8rem);
+        letter-spacing: -0.04em;
+        line-height: 1.05;
+      }
+
+      cite {
+        display: block;
+        margin-top: 2.5rem;
+        color: var(--gold);
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.17em;
+        text-transform: uppercase;
+      }
+
+      .closing {
+        padding: 8rem max(1.5rem, calc((100vw - 1120px) / 2));
+        background: var(--paper-deep);
+      }
+
+      .closing-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        align-items: end;
+      }
+
+      .closing h2 {
+        max-width: 620px;
+        margin: 0;
+        font-family: var(--serif);
+        font-size: clamp(3rem, 7vw, 7rem);
+        font-weight: 400;
+        letter-spacing: -0.055em;
+        line-height: 0.9;
+      }
+
+      .closing p { max-width: 240px; margin: 0; color: var(--muted); }
+
+      .contact-note {
+        display: block;
+        margin-top: 1.5rem;
+        color: var(--ink);
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .site-footer {
+        width: min(1120px, calc(100% - 3rem));
+        margin: 0 auto;
+        padding: 1.6rem 0;
+        display: flex;
+        justify-content: space-between;
+        color: var(--muted);
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 700px) {
+        .site-header,
+        .hero-content,
+        .hero-footer,
+        .section,
+        .site-footer { width: min(100% - 2rem, 1120px); }
+        .header-note { display: none; }
+        .hero-content { padding: 5rem 0 4rem; }
+        .hero h1 { font-size: clamp(3.5rem, 17vw, 6rem); }
+        .hero-media { background-position: 52% center; }
+        .hero-footer { font-size: 0.6rem; }
+        .section { padding: 6rem 0; }
+        .intro { display: block; }
+        .intro-copy { margin-top: 2.5rem; }
+        .intro-aside { margin-top: 2.2rem; }
+        .quote { padding: 6rem 1rem; }
+        .work { padding-top: 0; }
+        .work-grid { display: block; margin-top: 3rem; }
+        .work-step,
+        .work-step + .work-step { min-height: 0; padding: 1.8rem 0; border-left: 0; border-bottom: 1px solid var(--line); }
+        .work-step:last-child { border-bottom: 0; }
+        .work-step h3 { margin-top: 2.5rem; }
+        .attention { padding-top: 0; }
+        .attention-list { display: block; margin-top: 3rem; }
+        .attention-list li:nth-child(odd),
+        .attention-list li:nth-child(even) { padding: 1.35rem 0; border-left: 0; }
+        .principle-grid { display: block; margin-top: 3.5rem; }
+        .principle,
+        .principle + .principle { padding: 1.8rem 0; border-right: 0; border-bottom: 1px solid var(--line); }
+        .principle:last-child { border-bottom: 0; }
+        .principle h3 { margin-top: 1.5rem; }
+        .closing { padding: 6rem 1rem; }
+        .closing-inner { display: block; }
+        .closing p { margin-top: 2rem; }
+        .site-footer { display: block; }
+        .site-footer span { display: block; margin-top: 0.5rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <main>
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true"></div>
+        <header class="site-header">
+          <div class="wordmark">Merkhet Ventures</div>
+          <div class="header-note">Strategy / Partnership / Practice</div>
+        </header>
+
+        <div class="hero-content">
+          <p class="eyebrow">Holding company / venture platform</p>
+          <h1 id="hero-title">Transforming<br><em>Knowledge</em><br>Into Wisdom<br>For Impact</h1>
+          <p class="hero-description">Strategy, partnerships, and practical work for stronger communities and more capable systems.</p>
+          <a class="hero-link" href="#how-it-works">How Merkhet works <span aria-hidden="true">↓</span></a>
+        </div>
+
+        <div class="hero-footer">
+          <span>Communities / systems / technology</span>
+          <span>From insight to practice</span>
+        </div>
+      </section>
+
+      <section class="section intro" id="content" aria-labelledby="intro-title">
+        <p class="section-label">01 / What Merkhet is</p>
+        <div>
+          <h2 id="intro-title">A platform for work that starts with clarity.</h2>
+          <p class="intro-copy">Merkhet Ventures is a holding and venture company for strategic work across communities, systems, and technology. It is the platform through which ideas are clarified, partnerships are formed, and work is connected to the ventures, tools, and organizations that can carry it into practice.</p>
+          <p class="intro-aside">Exploring how economic activity can exist in greater harmony with people, communities, and the living world.</p>
+        </div>
+      </section>
+
+      <section class="section intro" aria-labelledby="vision-title">
+        <p class="section-label">02 / Vision</p>
+        <div>
+          <h2 id="vision-title">A future grounded in harmony.</h2>
+          <p class="intro-copy">A future where knowledge, wisdom, and technology are woven into everyday life, helping individuals, families, and communities live in harmony with themselves, one another, and the environment.</p>
+        </div>
+      </section>
+
+      <section class="quote" aria-label="Lao Tzu quote">
+        <div class="quote-inner">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <blockquote>To attain knowledge, add things everyday.<br>To attain wisdom, remove things every day.</blockquote>
+          <cite>Lao Tzu</cite>
+        </div>
+      </section>
+
+      <section class="section mission" id="mission" aria-labelledby="mission-title">
+        <p class="section-label">03 / Mission</p>
+        <div>
+          <h2 id="mission-title">Bringing good knowledge and wisdom into practice.</h2>
+          <p class="mission-copy">Merkhet Ventures uses social entrepreneurship and creative technologies to bring good knowledge and wisdom into practice—developing ventures, tools, and systems that make better ways of living more accessible.</p>
+        </div>
+      </section>
+
+      <section class="section work" id="how-it-works" aria-labelledby="work-title">
+        <p class="section-label">04 / From insight to practice</p>
+        <h2 class="work-heading" id="work-title">How the work moves.</h2>
+        <div class="work-grid">
+          <article class="work-step">
+            <span class="step-number">01</span>
+            <h3>Understand</h3>
+            <p>Clarify the challenge, the context, the values at stake, and the trade-offs involved.</p>
+          </article>
+          <article class="work-step">
+            <span class="step-number">02</span>
+            <h3>Shape</h3>
+            <p>Develop a direction, a strategy, and the partnerships needed for work that can hold up in the real world.</p>
+          </article>
+          <article class="work-step">
+            <span class="step-number">03</span>
+            <h3>Build</h3>
+            <p>Connect the work with the appropriate venture, organization, tool, or delivery platform.</p>
+          </article>
+          <article class="work-step">
+            <span class="step-number">04</span>
+            <h3>Strengthen</h3>
+            <p>Support progress that increases the capability of people, communities, and the systems around them.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section attention" aria-labelledby="attention-title">
+        <p class="section-label">05 / Areas of attention</p>
+        <h2 class="attention-heading" id="attention-title">Where Merkhet is paying attention.</h2>
+        <ul class="attention-list">
+          <li>Community wealth &amp; ownership</li>
+          <li>Civic &amp; governance innovation</li>
+          <li>Human &amp; community development</li>
+          <li>Responsible transition</li>
+          <li>Technology in service of impact</li>
+          <li>Venture &amp; strategy support</li>
+        </ul>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <div class="closing-inner">
+          <h2 id="closing-title">Ideas worth bringing into practice.</h2>
+          <p>Merkhet welcomes conversations about emerging ideas, strategic challenges, partnerships, and initiatives that can strengthen people, communities, and systems.<span class="contact-note">General contact details coming soon</span></p>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <span>Merkhet Ventures</span>
+        <span>Transforming knowledge into wisdom for impact</span>
+      </footer>
+    </main>
+  </body>
+</html>
