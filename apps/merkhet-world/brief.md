@@ -1,9 +1,9 @@
-# Merkhet Ventures Scroll World — Cold-start prompt
+# Merkhet World — Cold-start prompt
 
 Copy the prompt below into a fresh agent session after the `scroll-world` skill is installed and Higgsfield has been authenticated.
 
 ```text
-Use the installed `$scroll-world` skill to create a separate, desktop-first proof of concept called “Merkhet Ventures Scroll World.”
+Use the installed `$scroll-world` skill to create a separate, desktop-first proof of concept called “Merkhet World.”
 
 First, read these files in this exact order:
 
@@ -19,7 +19,7 @@ Subject: Merkhet Ventures — a holding and venture company for strategy, partne
 
 Scope and boundaries:
 
-- Build only inside apps/scroll-world/. Do not alter apps/website/, content/, brand/, archive/, Cloudflare configuration, DNS, or the live website.
+- Build only inside apps/merkhet-world/. Do not alter apps/website/, content/, brand/, archive/, Cloudflare configuration, DNS, or the live website.
 - This is an exploratory proof of concept, not a replacement for the current public site.
 - Do not use archived files as design or content input.
 - Do not invent a portfolio, fund, team, clients, investment activity, or impact claims.
@@ -47,7 +47,7 @@ Before generating any paid Higgsfield image or video assets:
 3. Show the available Higgsfield balance and give an estimated credit range or explain precisely what cannot be estimated.
 4. Stop and wait for my explicit budget approval.
 
-After approval, create the implementation only in apps/scroll-world/. Use the skill’s seam-safe pipeline and portable scroll engine. Include a still-image/reduced-motion fallback, semantic HTML, keyboard-accessible controls, and no auto-playing audio. Keep assets optimized and lazy-loaded.
+After approval, create the implementation only in apps/merkhet-world/. Use the skill’s seam-safe pipeline and portable scroll engine. Include a still-image/reduced-motion fallback, semantic HTML, keyboard-accessible controls, and no auto-playing audio. Keep assets optimized and lazy-loaded.
 
 Before finishing, test the desktop experience locally, review it against the source material above, correct obvious reading, performance, and seam issues, and give me the local preview URL plus a short list of the files created.
 ```

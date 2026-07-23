@@ -1,6 +1,6 @@
-# Merkhet Ventures Scroll World
+# Merkhet World
 
-This folder is reserved for a separate, experimental Scroll World build. It is not part of the public website unless explicitly approved.
+This folder is reserved for a separate, experimental Merkhet World build using the `scroll-world` skill. It is not part of the public website unless explicitly approved.
 
 Before work begins, read `brief.md`, then the authoritative source material named in the repository-level `AGENTS.md`.
 

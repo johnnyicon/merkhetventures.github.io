@@ -5,7 +5,7 @@ This repository is the home for the Merkhet Ventures public website, its source 
 ## Structure
 
 - `apps/website/` — the production-ready Merkhet Ventures website.
-- `apps/scroll-world/` — an isolated future Scroll World experiment.
+- `apps/merkhet-world/` — an isolated future Merkhet World experiment.
 - `content/` — company narrative, strategy, and discovery material.
 - `brand/` — brand guidance and visual references.
 - `plans/` — repository and migration plans.

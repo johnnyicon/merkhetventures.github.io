@@ -10,7 +10,7 @@ Merkhet Ventures should remain in **one repository**. A second repository is not
 The repository should become a small monorepo with clear boundaries between:
 
 1. the current/public website;
-2. future website experiences, including a possible Scroll World build;
+2. future website experiences, including a possible Merkhet World build;
 3. the strategic and brand source material that informs those experiences; and
 4. the legacy theme files retained temporarily for reference.
 
@@ -66,7 +66,7 @@ merkhetventures.github.io/
 │   │   ├── index.html
 │   │   ├── 404.html
 │   │   └── assets/
-│   └── scroll-world/                # Separate experimental build; never edits website directly
+│   └── merkhet-world/               # Separate experimental build; never edits website directly
 │       ├── brief.md
 │       ├── index.html
 │       ├── assets/
@@ -88,7 +88,7 @@ merkhetventures.github.io/
 └── AGENTS.md                         # Instructions for future Codex sessions
 ```
 
-The names can be refined later. The important distinction is that `apps/website/` is the public site, `apps/scroll-world/` is an isolated experiment, and `content/` plus `brand/` are the source material for both.
+The names can be refined later. The important distinction is that `apps/website/` is the public site, `apps/merkhet-world/` is an isolated experiment, and `content/` plus `brand/` are the source material for both.
 
 ## Recommended reorganization sequence
 
@@ -97,7 +97,7 @@ The names can be refined later. The important distinction is that `apps/website/
 1. Commit the current discovery/profile work.
 2. Add this plan and a short root `README.md` explaining the repository’s purpose.
 3. Create the new folder structure without moving or deleting public files yet.
-4. Create a concise `brand/brand-brief.md` and, later, a `apps/scroll-world/brief.md`.
+4. Create a concise `brand/brand-brief.md` and, later, an `apps/merkhet-world/brief.md`.
 
 At this point, the live site remains completely unchanged.
 
@@ -131,11 +131,11 @@ After the replacement website is live and verified, decide whether to:
 
 Deletion should happen only after the old site has been replaced and the archive has been reviewed. There is no need to carry the legacy template indefinitely, but there is also no reason to delete it before the new deployment is proven.
 
-## Cold-start instructions for a future Scroll World session
+## Cold-start instructions for a future Merkhet World session
 
-The new session should work only inside `apps/scroll-world/` and should not modify the public website. Give it this instruction:
+The new session should work only inside `apps/merkhet-world/` and should not modify the public website. Give it this instruction:
 
-> Build a separate Scroll World concept for Merkhet Ventures. Read only the following sources before making design decisions: `content/company-profile.md`, `content/website-content-strategy.md`, `brand/brand-brief.md`, and `apps/scroll-world/brief.md`. Use `brand/reference-images/section-10.jpg` only as a visual reference if useful. Do not read or reuse anything in `archive/`. Do not modify `apps/website/`, deployment settings, DNS, or the live site. Create all output inside `apps/scroll-world/`.
+> Build a separate Merkhet World concept for Merkhet Ventures. Read only the following sources before making design decisions: `content/company-profile.md`, `content/website-content-strategy.md`, `brand/brand-brief.md`, and `apps/merkhet-world/brief.md`. Use `apps/website/assets/images/section-10.jpg` only as a visual reference if useful. Do not read or reuse anything in `archive/`. Do not modify `apps/website/`, deployment settings, DNS, or the live site. Create all output inside `apps/merkhet-world/`.
 
 ### Files to provide to the skill
 
@@ -144,7 +144,7 @@ The new session should work only inside `apps/scroll-world/` and should not modi
 1. `content/company-profile.md` — the primary narrative and positioning source.
 2. `content/website-content-strategy.md` — prevents false claims such as a current fund, team, portfolio, or generic agency positioning.
 3. `brand/brand-brief.md` — visual tone, palette, typography preferences, and boundaries.
-4. `apps/scroll-world/brief.md` — the specific story that the camera should tell.
+4. `apps/merkhet-world/brief.md` — the specific story that the camera should tell.
 
 **Optional**
 
@@ -161,7 +161,7 @@ The new session should work only inside `apps/scroll-world/` and should not modi
 
 Those files would over-weight the old theme and dilute the Merkhet direction.
 
-## Scroll World: initial scope
+## Merkhet World: initial scope
 
 The first experiment should be a three-scene, desktop-only proof of concept. It should not replace the main website or require native mobile video on the first run.
 
@@ -175,7 +175,7 @@ The desired tone is architectural, contemplative, and credible—not playful for
 
 ## Brand brief: why it matters
 
-The Scroll World skill interviews for a brand kit and art direction. A brand brief will not prevent good creative exploration; it gives that exploration meaningful boundaries.
+The installed `scroll-world` skill provides the generation pipeline and implementation engine. The approved one-shot prompt supplies the subject, story, art direction, desktop-only scope, and source material so the build can proceed without a separate interview.
 
 For Merkhet, the brief should preserve:
 
@@ -191,7 +191,7 @@ It should explicitly avoid:
 - cartoonish or game-like impact imagery
 - activist, government-contractor, or capital-only fund positioning
 
-## Hosting consideration for a future Scroll World
+## Hosting consideration for a future Merkhet World
 
 GitHub Pages is suitable for a small proof of concept. A public video-led experience with meaningful traffic should eventually serve generated media from Cloudflare-backed storage or a CDN, while the website remains deployable from this monorepo.
 
@@ -199,6 +199,6 @@ GitHub Pages is suitable for a small proof of concept. A public video-led experi
 
 1. Approve the target folder structure.
 2. Decide whether the legacy theme should be archived in Git or removed after replacement.
-3. Create the brand brief before inviting the Scroll World skill into a new session.
-4. Write and approve the three-scene Scroll World brief.
+3. Create the brand brief before invoking the `scroll-world` skill in a new session.
+4. Write and approve the three-scene Merkhet World brief.
 5. Set a Higgsfield budget and choose whether the proof of concept remains desktop-only.

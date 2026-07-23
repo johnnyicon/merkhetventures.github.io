@@ -7,7 +7,7 @@ Move the public Merkhet Ventures website from GitHub Pages to Cloudflare Pages w
 ## What is ready in this repository
 
 - Deployable static site: `apps/website/`
-- Future experimental app: `apps/scroll-world/`
+- Future experimental app: `apps/merkhet-world/`
 - Company, content, and brand source material: `content/` and `brand/`
 - Legacy GitHub Pages implementation: `archive/legacy-titan-theme/`
 
@@ -43,7 +43,7 @@ The site is intentionally running the approved migration branch for this initial
 | Preview deployments | Enabled for non-production branches |
 | Build watch paths | Include `apps/website/*`; exclude `archive/*` and, if desired, content-only paths |
 
-Do not create a second project for Scroll World until that experiment has an approved build. It can later use the same repository with `apps/scroll-world` as its root directory.
+Do not create a second project for Merkhet World until that experiment has an approved build. It can later use the same repository with `apps/merkhet-world` as its root directory.
 
 ## Completed cutover sequence
 

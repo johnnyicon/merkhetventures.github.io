@@ -17,7 +17,7 @@ Use `content/discovery-transcript.jsonl` only when additional nuance is needed. 
 ## Application boundaries
 
 - Make public-site changes only inside `apps/website/`.
-- Make Scroll World experiment changes only inside `apps/scroll-world/`.
+- Make Merkhet World experiment changes only inside `apps/merkhet-world/`.
 - Do not modify one application while working on the other unless the user explicitly asks.
 - Do not treat files in `archive/` as design or implementation input. They are historical material only.
 
@@ -27,6 +27,6 @@ Use `content/discovery-transcript.jsonl` only when additional nuance is needed. 
 - Google Workspace DNS records are out of scope for website changes and must remain intact.
 - The deployed site must be a static build with an `index.html` at the deployed output root.
 
-## Scroll World cold start
+## Merkhet World cold start
 
-When asked to build the Scroll World concept, read `apps/scroll-world/brief.md` plus the three authoritative context files above. Do not read the archived theme or modify `apps/website/`.
+When asked to build the Merkhet World concept, read `apps/merkhet-world/brief.md` plus the three authoritative context files above. Do not read the archived theme or modify `apps/website/`.
