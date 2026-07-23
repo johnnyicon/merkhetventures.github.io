@@ -3,17 +3,19 @@
 Copy the prompt below into a fresh agent session after the `scroll-world` skill is installed and Higgsfield has been authenticated.
 
 ```text
-Use the installed $scroll-world skill to create a separate, desktop-first proof of concept called “Merkhet Ventures Scroll World.”
+Use the installed `$scroll-world` skill to create a separate, desktop-first proof of concept called “Merkhet Ventures Scroll World.”
 
 First, read these files in this exact order:
 
-1. apps/scroll-world/brief.md
+1. AGENTS.md
 2. content/company-profile.md
 3. content/website-content-strategy.md
 4. brand/brand-brief.md
 5. apps/website/index.html
 
 Treat files 2–4 as the authoritative source for meaning, positioning, language, and visual boundaries. Use file 5 only as a reference for the approved public-site tone, hero image, and teal-to-earth gradient. Do not modify it.
+
+Subject: Merkhet Ventures — a holding and venture company for strategy, partnerships, and practical work across communities, systems, and technology. The world should make its point of view tangible: change begins with clearer understanding, grows through connection and community capability, and must ultimately strengthen people, communities, and the environment.
 
 Scope and boundaries:
 
@@ -27,6 +29,10 @@ Create one continuous, scroll-scrubbed camera journey through three connected sc
 1. Clarity — knowledge becoming wisdom; change begins with the individual.
 2. Community — connection, capability, shared agency, and local action.
 3. Harmony — systems, environment, responsible transition, and long-term balance.
+
+Use the skill’s miniature/diorama “dive-in plus aerial connector” architecture for this concept. Each scene should begin as a coherent, high-level world and allow the camera to descend into a meaningful interior or focal moment. The aerial transitions should feel like moving through one connected world, not like cuts between unrelated illustrations. Use one frame-locking video model for the entire chain.
+
+Use this shared visual register unless the source material gives you a compelling reason to propose a small refinement: soft matte low-poly clay diorama, isometric miniature architecture, tilt-shift depth, warm directional light, restrained material texture, thoughtful and spacious composition. Keep the world materially grounded and slightly poetic, never cute or game-like.
 
 The world should feel architectural, contemplative, materially grounded, credible, and quietly ambitious. Make it reflective rather than promotional. It must not look like a generic AI launch, videogame, cartoon, activist campaign, fake venture portfolio, or literal stock-photo philanthropy.
 
