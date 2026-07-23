@@ -1,19 +1,63 @@
-# Scroll World — Cold-start brief
+# Merkhet Ventures Scroll World — Cold-start prompt
 
-## Scope
+Copy the prompt below into a fresh agent session after the `scroll-world` skill is installed and Higgsfield has been authenticated.
 
-Create a separate, desktop-first proof of concept for Merkhet Ventures. Do not replace or modify the public website.
+```text
+Use the installed $scroll-world skill to create a separate, desktop-first proof of concept called “Merkhet Ventures Scroll World.”
 
-## Narrative journey
+First, read these files in this exact order:
 
-The first version should contain three connected scenes:
+1. apps/scroll-world/brief.md
+2. content/company-profile.md
+3. content/website-content-strategy.md
+4. brand/brand-brief.md
+5. apps/website/index.html
 
-1. **Clarity** — knowledge becoming wisdom; change begins with the individual.
-2. **Community** — connection, capability, shared agency, and local action.
-3. **Harmony** — systems, environment, responsible transition, and long-term balance.
+Treat files 2–4 as the authoritative source for meaning, positioning, language, and visual boundaries. Use file 5 only as a reference for the approved public-site tone, hero image, and teal-to-earth gradient. Do not modify it.
 
-## Creative boundary
+Scope and boundaries:
 
-The world should feel architectural, contemplative, and credible. It should not resemble a generic AI launch, a game, a cartoon, a fake venture portfolio, or an activist campaign.
+- Build only inside apps/scroll-world/. Do not alter apps/website/, content/, brand/, archive/, Cloudflare configuration, DNS, or the live website.
+- This is an exploratory proof of concept, not a replacement for the current public site.
+- Do not use archived files as design or content input.
+- Do not invent a portfolio, fund, team, clients, investment activity, or impact claims.
 
-Use the company profile, website content strategy, and brand brief as the source of truth. Ask for budget approval before generating any Higgsfield assets. Start desktop-only; do not generate a separate native mobile video chain without explicit approval.
+Create one continuous, scroll-scrubbed camera journey through three connected scenes:
+
+1. Clarity — knowledge becoming wisdom; change begins with the individual.
+2. Community — connection, capability, shared agency, and local action.
+3. Harmony — systems, environment, responsible transition, and long-term balance.
+
+The world should feel architectural, contemplative, materially grounded, credible, and quietly ambitious. Make it reflective rather than promotional. It must not look like a generic AI launch, videogame, cartoon, activist campaign, fake venture portfolio, or literal stock-photo philanthropy.
+
+Keep the public-facing message restrained: “Transforming Knowledge Into Wisdom For Impact.” The Lao Tzu quote is an optional philosophical anchor, not copy that needs to appear in full. The goal is to make Merkhet’s point of view tangible, not to explain every part of the company profile.
+
+Start with a desktop-only concept. Do not generate a native mobile video chain unless I explicitly approve it.
+
+Before generating any paid Higgsfield image or video assets:
+
+1. Propose the three scene descriptions, visual treatment, and a concise narrative transition for each seam.
+2. State the exact proposed asset count, including stills, camera clips, connector clips, and any mobile assets.
+3. Show the available Higgsfield balance and give an estimated credit range or explain precisely what cannot be estimated.
+4. Stop and wait for my explicit budget approval.
+
+After approval, create the implementation only in apps/scroll-world/. Use the skill’s seam-safe pipeline and portable scroll engine. Include a still-image/reduced-motion fallback, semantic HTML, keyboard-accessible controls, and no auto-playing audio. Keep assets optimized and lazy-loaded.
+
+Before finishing, test the desktop experience locally, review it against the source material above, correct obvious reading, performance, and seam issues, and give me the local preview URL plus a short list of the files created.
+```
+
+## Prerequisites
+
+The full Scroll World pipeline needs:
+
+1. The `scroll-world` skill installed for the agent that will build it.
+2. Higgsfield CLI installed, authenticated, and funded for the image-to-video camera flights.
+3. `ffmpeg` and `ffprobe` available locally.
+4. Python 3 with Pillow available locally.
+
+Codex image generation can optionally provide the scene stills, but Higgsfield is still needed for the frame-locked video flights that make this a Scroll World.
+
+## Helpful but not required
+
+- The source hero image is `apps/website/assets/images/section-10.jpg`. It may be used as a tonal reference; do not assume it should appear in the 3D world.
+- `content/discovery-transcript.jsonl` is available if genuinely needed for nuance, but do not load it by default.
