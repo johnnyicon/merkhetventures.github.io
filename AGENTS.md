@@ -29,4 +29,4 @@ Use `content/discovery-transcript.jsonl` only when additional nuance is needed. 
 
 ## Merkhet World cold start
 
-When asked to build Merkhet World from the one-shot prompt, use the complete `apps/website/` folder as the creative source. The prompt may supply all creative direction; do not require an interview or force the separate content and brand documents into the prompt. Work only inside `apps/merkhet-world/` and do not modify the public website or archived theme.
+When asked to build Merkhet World from the one-shot prompt, use the written material in `content/` and `brand/` as the creative source. Do not require an interview or force the public website implementation into the prompt. Work only inside `apps/merkhet-world/` and do not modify the public website or archived theme.
