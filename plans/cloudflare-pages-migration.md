@@ -11,25 +11,26 @@ Move the public Merkhet Ventures website from GitHub Pages to Cloudflare Pages w
 - Company, content, and brand source material: `content/` and `brand/`
 - Legacy GitHub Pages implementation: `archive/legacy-titan-theme/`
 
-## Current Cloudflare Pages preview
+## Current Cloudflare Pages deployment
 
-The Git-connected Pages project has been created and the first deployment has been verified:
+The Git-connected Pages project is live and has been verified:
 
 | Setting | Current value |
 | --- | --- |
 | Pages project | `merkhet-ventures` |
-| Temporary preview address | `https://merkhet-ventures.pages.dev` |
+| Pages address | `https://merkhet-ventures.pages.dev` |
+| Live custom domains | `https://merkhetventures.com` and `https://www.merkhetventures.com` |
 | GitHub repository | `johnnyicon/merkhetventures.github.io` |
 | Current Pages production branch | `codex/monorepo-cloudflare-pages` |
 | Static output directory | `apps/website` |
 | Build command | `exit 0` |
 | First verified deployment | `970fe7f` |
 
-This project has **no custom domain attached**. `merkhetventures.com`, `www`, all DNS records, and Google Workspace are still on their previous configuration.
+The former four GitHub Pages apex A records have been replaced with a proxied Cloudflare Pages CNAME. The `www` record is also a proxied Cloudflare Pages CNAME. Google Workspace MX, TXT, CNAME, and SRV records remain unchanged.
 
-## Final Cloudflare Pages project configuration
+## Ongoing publishing configuration
 
-Before the public cutover, merge the approved work into `master` and update the Pages production branch to `master`:
+The site is intentionally running the approved migration branch for this initial cutover. Before normal ongoing publishing, merge the approved work into `master` and update the Pages production branch to `master`:
 
 | Setting | Value |
 | --- | --- |
@@ -44,15 +45,16 @@ Before the public cutover, merge the approved work into `master` and update the 
 
 Do not create a second project for Scroll World until that experiment has an approved build. It can later use the same repository with `apps/scroll-world` as its root directory.
 
-## Safe cutover sequence
+## Completed cutover sequence
 
-1. Push the approved migration branch and connect the repository to Cloudflare Pages.
-2. Verify the generated `*.pages.dev` preview thoroughly.
-3. Confirm `merkhetventures.com` and `www.merkhetventures.com` are not yet attached to the Pages project.
-4. At the approved cutover moment, add the custom domain in the Cloudflare Pages project before changing DNS. The domain is already an active Cloudflare zone, so no nameserver change is needed.
-5. Follow Cloudflare's generated DNS instructions: retire only the four legacy GitHub Pages apex A records and the legacy `www` website record, then use the proxied Cloudflare Pages records.
-6. Verify the apex site, `www` behavior, HTTPS certificate, and the 404 page.
-7. Only after the Cloudflare Pages domain is active, remove the custom domain from GitHub Pages. Keep the old GitHub Pages source archived for rollback until the new site has been stable.
+1. The approved migration branch was pushed and connected to Cloudflare Pages.
+2. The generated `*.pages.dev` deployment was verified.
+3. `merkhetventures.com` and `www.merkhetventures.com` were registered with the Pages project before changing DNS.
+4. The four legacy GitHub Pages apex A records were retired and replaced with a proxied Pages CNAME; `www` now also points to Pages.
+5. The apex site, `www`, HTTPS, and the hero image have all been verified live.
+6. Google Workspace records were left unchanged.
+
+Keep the old GitHub Pages source and configuration as a rollback reference until the new site has been stable and its ongoing publishing branch is switched to `master`.
 
 ## DNS records that must not change
 
