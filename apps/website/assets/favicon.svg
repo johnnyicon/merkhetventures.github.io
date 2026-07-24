@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Merkhet Ventures</title>
+  <rect width="64" height="64" rx="16" fill="#0b1b21"/>
+  <path d="M11 49 32 13l21 36Z" fill="#2f8f88" opacity=".72"/>
+  <path d="M32 13 11 49h21Z" fill="#c7a56a" opacity=".18"/>
+  <path d="M32 13 11 49h42Z" fill="none" stroke="#c7a56a" stroke-linejoin="round" stroke-width="2.5"/>
+  <path d="M32 13v36M8 52h48" fill="none" stroke="#f3f1eb" stroke-linecap="round" stroke-width="2"/>
+  <circle cx="32" cy="13" r="2.2" fill="#f3f1eb"/>
+</svg>
